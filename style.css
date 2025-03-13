@@ -16,7 +16,7 @@ header {
 }
 
 header img {
-    width: 400px; /* Уменьшаем размер логотипа */
+    width: 300px; /* Уменьшаем размер логотипа для мобильных */
     height: auto;
     margin-bottom: 10px;
 }
@@ -72,4 +72,57 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 768px) {
+    header img {
+        width: 80%; /* Логотип станет меньше на мобильных */
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    nav ul li {
+        display: block; /* Список станет вертикальным */
+        margin: 10px 0;
+    }
+
+    nav a {
+        width: 100%; /* Кнопки будут растягиваться на всю ширину */
+        padding: 15px;
+        font-size: 20px;
+    }
+
+    main {
+        padding: 10px; /* Меньше отступов на мобильных */
+    }
+
+    section {
+        width: 90%; /* Уменьшаем ширину для мобильных */
+    }
+
+    footer {
+        font-size: 14px; /* Меньше шрифт в подвале */
+    }
+}
+
+/* Для еще меньших экранов (например, телефонов) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 24px; /* Уменьшаем размер заголовка */
+    }
+
+    nav a {
+        font-size: 16px; /* Уменьшаем размер шрифта на маленьких экранах */
+    }
+
+    section {
+        padding: 15px; /* Меньше отступов */
+    }
+
+    footer {
+        font-size: 12px; /* Еще меньше шрифт в подвале */
+    }
 }
